@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="[[html_lang]]" data-locale="[[locale]]" data-base-path="[[base_path]]">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#06080c">
+    <meta name="description" content="[[meta_description]]">
+    <title>[[page_title]]</title>
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="[[og_locale]]">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="[[site_name]]">
+    <meta property="og:title" content="[[page_title]]">
+    <meta property="og:description" content="[[og_description]]">
+    <meta property="og:image" content="/[[social_image]]">
+    <meta property="og:image:type" content="[[social_image_type]]">
+    <meta property="og:image:alt" content="[[site_name]] logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[[page_title]]">
+    <meta name="twitter:description" content="[[og_description]]">
+    <meta name="twitter:image" content="/[[social_image]]">
+    <meta name="twitter:image:alt" content="[[site_name]] logo">
+    <!-- Set absolute canonical, og:url, and social-image URLs when the production domain is confirmed. -->
+    <link rel="icon" href="/[[favicon]]">
+    <link rel="canonical" href="[[canonical_path]]">
+[[alternate_links]]
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/locale-router.js"></script>
+[[analytics_scripts]]
+    <script src="/smoke.js" defer></script>
+    <script src="/hero-slider.js" defer></script>
+    <script src="/countdown.js" defer></script>
+    <script src="/locale-switcher.js" defer></script>
+  </head>
+  <body>
+    <canvas id="smoke-canvas" class="smoke-canvas" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main-content">[[skip_link_label]]</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand-link" href="/" aria-label="[[brand_home_label]]" translate="no">
+          <img
+            src="/[[logo]]"
+            alt="[[site_name]]"
+            width="600"
+            height="200"
+            fetchpriority="high"
+          >
+        </a>
+        <div class="header-actions">
+          <details class="language-switcher">
+            <summary aria-label="[[language_switcher_label]]"><img src="/flags/40x30/gb.png" width="20" height="15" alt="" loading="lazy"><span data-current-language>[[language_current_label]]</span></summary>
+            <nav class="language-menu" aria-label="[[language_switcher_label]]">
+              <a href="/en/" data-locale-link="en-GB" lang="en-GB" aria-label="English"><img src="/flags/40x30/gb.png" width="20" height="15" alt="" loading="lazy">English</a>
+              <a href="/de/" data-locale-link="de-DE" lang="de-DE" aria-label="Deutsch"><img src="/flags/40x30/de.png" width="20" height="15" alt="" loading="lazy">Deutsch</a>
+              <a href="/nl/" data-locale-link="nl-NL" lang="nl-NL" aria-label="Nederlands"><img src="/flags/40x30/nl.png" width="20" height="15" alt="" loading="lazy">Nederlands</a>
+              <a href="/es/" data-locale-link="es-ES" lang="es-ES" aria-label="Español"><img src="/flags/40x30/es.png" width="20" height="15" alt="" loading="lazy">Español</a>
+              <a href="/it/" data-locale-link="it-IT" lang="it-IT" aria-label="Italiano"><img src="/flags/40x30/it.png" width="20" height="15" alt="" loading="lazy">Italiano</a>
+              <a href="/fr/" data-locale-link="fr-FR" lang="fr-FR" aria-label="Français"><img src="/flags/40x30/fr.png" width="20" height="15" alt="" loading="lazy">Français</a>
+              <a href="/pt-br/" data-locale-link="pt-BR" lang="pt-BR" aria-label="Português (Brasil)"><img src="/flags/40x30/br.png" width="20" height="15" alt="" loading="lazy">Português</a>
+              <a href="/ja/" data-locale-link="ja-JP" lang="ja-JP" aria-label="日本語"><img src="/flags/40x30/jp.png" width="20" height="15" alt="" loading="lazy">日本語</a>
+              <a href="/ko/" data-locale-link="ko-KR" lang="ko-KR" aria-label="한국어"><img src="/flags/40x30/kr.png" width="20" height="15" alt="" loading="lazy">한국어</a>
+            </nav>
+          </details>
+          <button class="waitlist-button" type="button" disabled>
+            <span>[[waitlist_label]]</span>
+            <span class="waitlist-badge" aria-hidden="true">[[coming_soon_label]]</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="main-content" class="coming-soon-main">
+        <section class="coming-soon-hero" aria-labelledby="page-title">
+          <div class="hero-slider" data-hero-slider aria-label="[[benefits_label]]">
+            <p class="eyebrow hero-slider-eyebrow" data-hero-eyebrow>
+              <span class="eyebrow-mark" aria-hidden="true"></span>[[slide_1_eyebrow]]
+            </p>
+            <h1 class="hero-slider-title" id="page-title" data-hero-title>
+              [[slide_1_title]]
+            </h1>
+            <div class="hero-slider-viewport">
+              <article class="hero-slide is-active" data-hero-slide data-title="[[slide_1_title]]" data-eyebrow="[[slide_1_eyebrow]]" aria-hidden="false">
+                <p class="hero-slide-copy">[[slide_1_copy]]</p>
+              </article>
+              <article class="hero-slide" data-hero-slide data-title="[[slide_2_title]]" data-eyebrow="[[slide_2_eyebrow]]" aria-hidden="true" inert>
+                <p class="hero-slide-copy">[[slide_2_copy]]</p>
+              </article>
+              <article class="hero-slide" data-hero-slide data-title="[[slide_3_title]]" data-eyebrow="[[slide_3_eyebrow]]" aria-hidden="true" inert>
+                <p class="hero-slide-copy">[[slide_3_copy]]</p>
+              </article>
+              <article class="hero-slide" data-hero-slide data-title="[[slide_4_title]]" data-eyebrow="[[slide_4_eyebrow]]" aria-hidden="true" inert>
+                <p class="hero-slide-copy">[[slide_4_copy]]</p>
+              </article>
+            </div>
+            <div class="hero-slider-controls">
+              <button class="hero-slider-button" type="button" data-hero-previous aria-label="[[previous_label]]">
+                <svg aria-hidden="true" viewBox="0 0 448 512" focusable="false">
+                  <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.2L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path>
+                </svg>
+              </button>
+              <div class="hero-slider-dots" role="group" aria-label="[[choose_benefit_label]]">
+                <button class="hero-slider-dot is-active" type="button" data-hero-dot="0" aria-label="[[benefit_1_label]]" aria-pressed="true"><span aria-hidden="true">01</span></button>
+                <button class="hero-slider-dot" type="button" data-hero-dot="1" aria-label="[[benefit_2_label]]" aria-pressed="false"><span aria-hidden="true">02</span></button>
+                <button class="hero-slider-dot" type="button" data-hero-dot="2" aria-label="[[benefit_3_label]]" aria-pressed="false"><span aria-hidden="true">03</span></button>
+                <button class="hero-slider-dot" type="button" data-hero-dot="3" aria-label="[[benefit_4_label]]" aria-pressed="false"><span aria-hidden="true">04</span></button>
+              </div>
+              <span class="hero-slider-status" data-hero-status aria-live="polite">01 / 04</span>
+              <button class="hero-slider-toggle" type="button" data-hero-toggle data-label-pause="[[pause_label]]" data-label-play="[[play_label]]" aria-label="[[pause_label]]" aria-pressed="false">
+                <svg class="pause-icon" aria-hidden="true" viewBox="0 0 320 512" focusable="false">
+                  <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48s48-21.5 48-48V48C96 21.5 74.5 0 48 0zm224 0c-26.5 0-48 21.5-48 48V464c0 26.5 21.5 48 48 48s48-21.5 48-48V48c0-26.5-21.5-48-48-48z"></path>
+                </svg>
+                <svg class="play-icon" aria-hidden="true" viewBox="0 0 384 512" focusable="false">
+                  <path d="M73 39c-14.8-9.1-33.7-9.4-48.9-.7S0 63.8 0 80V432c0 16.2 9 31.2 24.1 39.7s34 8.4 48.9-.7l288-176c14.3-8.7 23-24.3 23-40.9s-8.7-32.2-23-40.9L73 39z"></path>
+                </svg>
+              </button>
+              <button class="hero-slider-button" type="button" data-hero-next aria-label="[[next_label]]">
+                <svg aria-hidden="true" viewBox="0 0 448 512" focusable="false">
+                  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="countdown-panel"
+          aria-labelledby="countdown-title"
+          data-release-at="[[release_at]]"
+        >
+          <div class="visual-frame">
+            <span class="frame-corner frame-corner--top-left" aria-hidden="true"></span>
+            <span class="frame-corner frame-corner--top-right" aria-hidden="true"></span>
+            <span class="frame-corner frame-corner--bottom-left" aria-hidden="true"></span>
+            <span class="frame-corner frame-corner--bottom-right" aria-hidden="true"></span>
+            <span class="frame-index" aria-hidden="true">[[brand_initials]] / 001</span>
+            <div class="countdown-header">
+            <p class="utility-label">[[launch_window_label]]</p>
+              <h2 id="countdown-title">
+                [[opening_on_label]] <time id="release-date" datetime="[[release_at]]">[[release_date]]</time>
+              </h2>
+              <p class="countdown-copy">
+                [[countdown_copy]]
+              </p>
+            </div>
+          </div>
+          <div class="flip-clock" id="countdown" role="timer" aria-label="[[countdown_aria_label]]" data-locale="[[locale]]" data-label-days="[[days_label]]" data-label-hours="[[hours_label]]" data-label-minutes="[[minutes_label]]" data-label-seconds="[[seconds_label]]" data-summary-template="[[countdown_summary_template]]" data-complete-label="[[countdown_complete_label]]" data-complete-status="[[countdown_complete_status]]">
+            <div class="flip-group" data-unit="days">
+              <div class="flip-pair" aria-hidden="true">
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+              </div>
+              <span class="countdown-label">[[days_label]]</span>
+            </div>
+            <span class="flip-separator" aria-hidden="true">:</span>
+            <div class="flip-group" data-unit="hours">
+              <div class="flip-pair" aria-hidden="true">
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+              </div>
+              <span class="countdown-label">[[hours_label]]</span>
+            </div>
+            <span class="flip-separator" aria-hidden="true">:</span>
+            <div class="flip-group" data-unit="minutes">
+              <div class="flip-pair" aria-hidden="true">
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+              </div>
+              <span class="countdown-label">[[minutes_label]]</span>
+            </div>
+            <span class="flip-separator" aria-hidden="true">:</span>
+            <div class="flip-group" data-unit="seconds">
+              <div class="flip-pair" aria-hidden="true">
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+                <span class="flip-digit" data-value="0"><span class="flip-face flip-face--static-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--static-bottom"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-top"><span class="flip-glyph">0</span></span><span class="flip-face flip-face--flip-bottom"><span class="flip-glyph">0</span></span></span>
+              </div>
+              <span class="countdown-label">[[seconds_label]]</span>
+            </div>
+          </div>
+          <p class="countdown-status sr-only" id="countdown-status" role="status" aria-live="polite"></p>
+          <noscript>
+            <p class="countdown-noscript">[[countdown_noscript]]</p>
+          </noscript>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span class="footer-copyright">© <span id="current-year">[[copyright_year]]</span> [[site_name]]</span>
+        <span class="footer-rule" aria-hidden="true"></span>
+        <span>[[footer_tagline]]</span>
+      </footer>
+    </div>
+  </body>
+</html>

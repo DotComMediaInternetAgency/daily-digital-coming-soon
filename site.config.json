@@ -1,0 +1,15 @@
+{
+  "name": "Daily Digital",
+  "domain": "https://dotcommediainternetagency.github.io",
+  "basePath": "/daily-digital-coming-soon",
+  "releaseAt": "2026-09-30T23:59:59+03:00",
+  "analytics": {
+    "clarityId": "ye6x0f1bbb",
+    "ga4MeasurementId": "G-7EBG8KEL9G"
+  },
+  "brand": {
+    "logo": "brand/logo-daily-digital-v1.webp",
+    "favicon": "brand/favicon-daily-digital-v1.webp",
+    "socialImage": "brand/logo-daily-digital-v1.png"
+  }
+}
